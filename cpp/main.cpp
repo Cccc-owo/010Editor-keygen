@@ -1,3 +1,4 @@
+#include <cstdint>
 #include <iostream>
 #include <ctime>
 #include "_010EditorKeygen.hpp"
@@ -9,9 +10,9 @@ int main() {
 
     std::tm ZeroDate = { 0, 0, 0, 1, 1, 1970 - 1900 };
 
-    int ExpireYear = 2020;
-    int ExpireMonth = 6;
-    int ExpireDay = 23;
+    int ExpireYear = 2099;
+    int ExpireMonth = 12;
+    int ExpireDay = 31;
     std::tm ExpireDate = { 0, 0, 0, ExpireDay, ExpireMonth, ExpireYear - 1900 };
     uint32_t ExpireDaystamp = static_cast<uint32_t>(std::difftime(std::mktime(&ExpireDate), std::mktime(&ZeroDate)) / 3600 / 24);
 
