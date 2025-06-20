@@ -36,7 +36,9 @@ jobs:
         # Artifact name
         name: 010Editor-keygen # optional, default is artifact
         # A file, directory or wildcard pattern that describes what to upload
-        path: ${{github.workspace}}/build/Release/010Editor-keygen.exe
+        path: | 
+          ${{github.workspace}}/build/Release/010Editor-keygen.exe
+          ${{github.workspace}}/disableDetection.reg
 
   nightly-release:
     permissions: write-all
@@ -59,6 +61,7 @@ jobs:
           title: "CI Build"
           files: |
             010Editor-keygen/010Editor-keygen.exe
+            010Editor-keygen/disableDetection.reg
 
   release:
     permissions: write-all
@@ -81,3 +84,4 @@ jobs:
         with:
           files: |
             010Editor-keygen/010Editor-keygen.exe
+            010Editor-keygen/disableDetection.reg
