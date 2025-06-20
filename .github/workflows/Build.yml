@@ -60,7 +60,7 @@ jobs:
           prerelease: true
           title: "CI Build"
           files: |
-            010Editor-keygen/010Editor-keygen.exe
+            010Editor-keygen/build/Release/010Editor-keygen.exe
             010Editor-keygen/disableDetection.reg
 
   release:
@@ -83,5 +83,5 @@ jobs:
         uses: softprops/action-gh-release@v2
         with:
           files: |
-            010Editor-keygen/010Editor-keygen.exe
+            010Editor-keygen/build/Release/010Editor-keygen.exe
             010Editor-keygen/disableDetection.reg
